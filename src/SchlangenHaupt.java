@@ -12,6 +12,19 @@ public class SchlangenHaupt {
 		schlange.rein(new Wert(93.0));
 		
 		schlange.ausgabe();
+		
+		System.out.println("Raus: " + schlange.raus().d);
+		System.out.println("Raus: " + schlange.raus().d);
+		
+		schlange.rein(new Wert(28.0));
+		schlange.rein(new Wert(1.0));
+		schlange.rein(new Wert(97.0));
+		
+		schlange.ausgabe();
+		
+		System.out.println("Raus: " + schlange.raus().d);
+		
+		schlange.ausgabe();
 	}
 
 }

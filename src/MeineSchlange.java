@@ -18,10 +18,14 @@ public class MeineSchlange implements WarteSchlange{
 	@Override
 	public Wert raus() {
 		// TODO Auto-generated method stub
-		return null;
+		Wert temp = anfang;
+		anfang = temp.next;
+		
+		return temp;
 	}
 	
 	public void ausgabe() {
+		System.out.println("");
 		Wert temp = anfang;
 		while (temp != null) {
 			System.out.println(temp.d);
