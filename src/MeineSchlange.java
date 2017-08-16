@@ -6,13 +6,28 @@ public class MeineSchlange implements WarteSchlange{
 	@Override
 	public void rein(Wert d) {
 		// TODO Auto-generated method stub
-		
+		if(anfang == null) {
+			anfang = d;
+			ende = d;
+		} else {
+			ende.next = d;
+			ende = d;
+		}
 	}
 
 	@Override
 	public Wert raus() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+	
+	public void ausgabe() {
+		Wert temp = anfang;
+		while (temp != null) {
+			System.out.println(temp.d);
+			temp = temp.next;
+		}
+		System.out.println("");
 	}
 
 }
